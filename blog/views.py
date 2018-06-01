@@ -57,6 +57,7 @@ def post_edit(request, pk):
 
 
 def post_remove(reques, pk):
+    # delete a post
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect('post_list')
